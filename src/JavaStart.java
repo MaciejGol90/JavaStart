@@ -1,10 +1,12 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class JavaStart {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
-        Scanner odczyt = new Scanner(System.in);
+       /* Scanner odczyt = new Scanner(System.in);
         System.out.println("Podaj imie");
         String imie = odczyt.nextLine();
 
@@ -14,7 +16,14 @@ public class JavaStart {
             System.out.println("Siema " + imie);
         } else {
             System.out.println("sory nie kojarze");
-        }
+        }*/
+
+        File imiona = new File("imiona.txt");
+        Scanner in = new Scanner(imiona);
+
+        String zdanie = in.nextLine();
+        System.out.println(zdanie);
+
     }
 }
 
